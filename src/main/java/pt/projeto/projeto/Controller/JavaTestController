@@ -6,14 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping; 
 import org.springframework.web.bind.annotation.RestController; 
 @RestController 
-@RequestMapping(path="/api/greeter") 
-public class GreeterController {   
-    private Logger logger = LoggerFactory.getLogger(GreeterController.class); 
-    @GetMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE) 
-    public String getGreeting() { 
-        logger.info("Saying Hello to the world"); 
-        String name = "";
-        int number = 5;
+@RequestMapping(path="/api/java/tester/") 
+public class JavaTestController {   
+    private Logger logger = LoggerFactory.getLogger(class: JavaTesterController.class);
+    @GetMapping(path = "/author", produces= MediaType.APPLICATION_JSON_VALUE) 
+    public String getAuthor() { 
+        logger.info(msg:"Seding the author of this code"); 
+        
         return "Hello World"; 
     } 
 } 
